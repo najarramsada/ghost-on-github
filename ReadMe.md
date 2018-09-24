@@ -16,11 +16,11 @@ Credits to Ghost community and Fernando Paladini for Ghost on Github scripts. Al
 
 ### To Run Ghost blog
 
-	`docker-compose up -d`
+	docker-compose up -d
 	
 Contents of docker-compose.yml file
 	
-	`version: '3'
+	version: '3'
 
 	services:
 	  ghost:
@@ -33,7 +33,7 @@ Contents of docker-compose.yml file
           - ghost:/home/node/.ghost/content	#Always a good idea to have a volume for persistent data. If not used, each time you start the container a new instance of blog will be deployed  
 
     volumes:
-      ghost:`
+      ghost:
  
 ### To publish the Ghost blog on your github pages.
 
@@ -41,13 +41,13 @@ Go to https://github.com/ and create a new repository. Copy the HTTPS URL of you
 
 #### For first run below commands are required to establish the github identity
 
-	`docker exec -it <Container name or id> gosu node git config --global user.email "<Your Github useremail>"`
+	docker exec -it <Container name or id> gosu node git config --global user.email "<Your Github useremail>"
 	
-	`docker exec -it <Container name or id> gosu node git config --global user.name "<Your Github username>"`
+	docker exec -it <Container name or id> gosu node git config --global user.name "<Your Github username>"
  
 #### Publish the blog
 
-	`docker exec -it <Container name or id> gosu node /tmp/install.sh`
+	docker exec -it <Container name or id> gosu node /tmp/install.sh
 	
 For first commit you will need to supply the Github repository URL which was copied in earlier step (e.g. https://github.com/najarramsada/ghost-on-github.git). This script will also prompt you to login to github, enter your username and password.
 Wait till the repository is pushed to Github pages, than goto settings page of your github repository and it will show you the URL it is published as. Your blog is live on github pages.
@@ -56,7 +56,7 @@ Wait till the repository is pushed to Github pages, than goto settings page of y
 
 Downside of hosting Ghost blog on Github is that each time you write a new post, you need to update the static pages on github, to do that just run below command on host where your Ghost docker is running. This is a same command that was used for first commit and applies for ongoing update.
 
-	`docker exec -it ghost gosu node /tmp/install.sh`
+	docker exec -it ghost gosu node /tmp/install.sh
 
 ## Contact
-`ramsadanajar@gmail.com`
+ramsadanajar@gmail.com
