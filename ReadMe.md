@@ -56,7 +56,7 @@ Wait till the repository is pushed to Github pages, than goto settings page of y
 
 Downside of hosting Ghost blog on Github is that each time you write a new post, you need to update the static pages on github, to do that just run below command on host where your Ghost docker is running. This is a same command that was used for first commit and applies for ongoing update.
 
-	docker exec -it ghost gosu node /tmp/install.sh
+	docker exec -it <Container name or id> gosu node /tmp/install.sh
 
 ## Contact
 ramsadanajar@gmail.com
