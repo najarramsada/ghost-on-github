@@ -6,9 +6,9 @@ services:
     container_name: ghost
     restart: always
     ports:
-      - 8880:2368
+      - 2368:2368
     volumes:
-      - ghost:/home/node/.ghost/content
+      - ghost:/var/lib/ghost/content
 
 volumes:
   ghost:

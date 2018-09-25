@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-HOME_PATH=$HOME
-GHOST_PATH="${HOME_PATH}/.ghost/"
+HOME_PATH=/var/lib/
+GHOST_PATH="${HOME_PATH}/ghost/"
 
 # Get absolute path for the script being executed.
 # Based on https://gist.github.com/TheMengzor/968e5ea87e99d9c41782

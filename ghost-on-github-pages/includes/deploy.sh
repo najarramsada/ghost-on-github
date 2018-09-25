@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-HOME_PATH=$HOME
-GHOST_PATH="${HOME_PATH}/.ghost/current"
+HOME_PATH=/var/lib/
+GHOST_PATH="${HOME_PATH}/ghost/current"
 GHOST_SERVER_URL="localhost:2368/"
 
 first_deploy() {
