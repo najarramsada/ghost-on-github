@@ -35,6 +35,11 @@ Contents of docker-compose.yml file
     volumes:
       ghost:
  
+### Edit your blog locally
+
+Go to your web browser and open a link `http://<docker host IP>:<your custom port>/` (e.g. http://192.168.1.14:8880/).
+Go to `http://<docker host IP>:<your custom port>/admin` to create your account and edit the blog to your liking. This is also the address for you to write a new post.
+	
 ### To publish the Ghost blog on your github pages.
 
 Go to https://github.com/ and create a new repository. Copy the HTTPS URL of your repository, e.g. `https://github.com/najarramsada/ghost-on-github.git` 
